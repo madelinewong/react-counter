@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Email from './Email';
 
 class App extends Component {
   constructor(){
@@ -17,7 +18,7 @@ class App extends Component {
     this.setState({count: this.state.count + this.state.value});
   }
   decrement(){
-  this.setState({count: this.state.count + this.state.value});
+  this.setState({count: this.state.count - this.state.value});
 }
  reset(){
    this.setState({count: 0})
@@ -34,8 +35,8 @@ class App extends Component {
         <button className="btn btn-primary" onClick={this.increment}>+</button>
         <button className="btn btn-primary" onClick={this.decrement}>-</button>
        <h1>{this.state.count}</h1>
-       <button className="btn btn-primary" onClick={this.reset}>reset</button> 
-       
+       <button className="btn btn-danger" onClick={this.reset}>reset</button> 
+       <Email />
       </div>
     );
   }
